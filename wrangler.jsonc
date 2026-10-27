@@ -1,0 +1,11 @@
+// Cloudflare settings for the BeanByte Studio website.
+// The site is plain files in public/, served by a Worker with no code of its own.
+{
+  "name": "beanbytestudio",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "html_handling": "auto-trailing-slash", // /about serves about.html
+    "not_found_handling": "404-page"        // unknown paths show 404.html
+  }
+}

@@ -1,0 +1,95 @@
+/* BeanByte Studio site styles. Colours and fonts come from the Brand Guide. */
+
+:root {
+  --espresso: #0f0d0b; /* page background */
+  --roast: #1c1814;    /* cards and panels */
+  --line: #3a322a;     /* borders */
+  --crema: #d1ac5b;    /* the one accent colour */
+  --milk: #ede6da;     /* main text */
+  --muted: #a89f92;    /* secondary text */
+  --sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--espresso);
+  color: var(--milk);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--crema); }
+a:hover { color: var(--milk); }
+
+/* A clear outline for keyboard users on every link and button. */
+a:focus-visible { outline: 2px solid var(--crema); outline-offset: 3px; border-radius: 4px; }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--milk); text-decoration: none; font-weight: 700; font-size: 19px; }
+.brand img { width: 34px; height: 34px; }
+.brand span { color: var(--crema); }
+.nav { display: flex; gap: 20px; font-size: 16px; }
+.nav a { color: var(--muted); text-decoration: none; }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--milk); }
+
+/* Opening section */
+.intro { padding: 72px 0 56px; max-width: 760px; }
+h1 { font-size: clamp(36px, 6vw, 56px); line-height: 1.1; letter-spacing: -1px; margin: 0 0 20px; }
+.lead { font-size: 20px; color: #cfc6b8; margin: 0 0 28px; }
+
+.btn { display: inline-block; padding: 12px 20px; border-radius: 8px; font-weight: 600; text-decoration: none; min-height: 44px; }
+.btn-main { background: var(--crema); color: var(--espresso); }
+.btn-main:hover { background: var(--milk); color: var(--espresso); }
+.btn-plain { border: 1px solid var(--line); color: var(--milk); }
+.btn-plain:hover { border-color: var(--muted); color: var(--milk); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* One section per app: text on one side, a real screenshot on the other. */
+.app { display: grid; grid-template-columns: 1fr 340px; gap: 56px; align-items: center; padding: 56px 0; border-top: 1px solid var(--line); }
+.app.flip { grid-template-columns: 340px 1fr; }
+.app.flip .app-text { order: 2; }
+.app h2 { font-size: 34px; margin: 0 0 6px; }
+.app .what { font-size: 21px; color: var(--milk); margin: 0 0 18px; }
+.app ul { margin: 0 0 22px; padding-left: 20px; color: #cfc6b8; }
+.app li { margin-bottom: 6px; }
+.price { font-family: var(--mono); font-size: 15px; color: var(--crema); margin: 0 0 22px; }
+.shot { margin: 0; }
+.shot img { border-radius: 18px; border: 1px solid var(--line); }
+.shot figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
+
+/* Plain text sections */
+.notes { padding: 56px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px 48px; }
+.notes h2 { grid-column: 1 / -1; font-size: 28px; margin: 0; }
+.notes h3 { font-size: 18px; margin: 0 0 6px; }
+.notes p { margin: 0; color: #cfc6b8; }
+
+.follow { padding: 56px 0 72px; border-top: 1px solid var(--line); }
+.follow h2 { font-size: 28px; margin: 0 0 8px; }
+.follow p { color: #cfc6b8; margin: 0 0 20px; }
+
+/* About page */
+.page { padding: 56px 0 72px; max-width: 720px; }
+.page h2 { font-size: 24px; margin: 40px 0 8px; }
+.page p { color: #cfc6b8; }
+.todo { border: 1px dashed var(--crema); border-radius: 8px; padding: 16px; color: var(--crema); }
+
+.foot { border-top: 1px solid var(--line); padding: 24px 0 40px; font-size: 14px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.foot a { color: var(--muted); }
+
+/* Phones: stack everything in one column. */
+@media (max-width: 760px) {
+  .intro { padding: 40px 0 32px; }
+  .lead { font-size: 18px; }
+  .app, .app.flip { grid-template-columns: 1fr; gap: 28px; padding: 40px 0; }
+  .app.flip .app-text { order: 0; }
+  .shot { max-width: 320px; }
+}
