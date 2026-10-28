@@ -21,7 +21,7 @@ The studio's public site: who we are and links to Headroom and Trade Tracker. Pl
 | Command | What it does |
 |---|---|
 | `npx wrangler dev` | Runs the site on your computer at http://localhost:8787 |
-| `npx wrangler deploy` | Publishes the site (Cloudflare does this for you on every push to `main`) |
+| `npm run deploy` | Checks, publishes and verifies the site (the only way it goes live; nothing deploys on push) |
 
 ## Checks and deploying
 
