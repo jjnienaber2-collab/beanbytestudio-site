@@ -1,0 +1,10 @@
+{
+  "name": "beanbytestudio-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "check:live": "node scripts/check.mjs --live",
+    "deploy": "node scripts/check.mjs && npx wrangler deploy && node scripts/check.mjs --live"
+  }
+}
