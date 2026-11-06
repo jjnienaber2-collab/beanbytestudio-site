@@ -1,6 +1,6 @@
 # BeanByte Studio website
 
-The studio's public site: who we are and links to Headroom and Trade Tracker. Plain HTML and CSS, hosted free on Cloudflare.
+The studio's public site: who we are and links to Headroom and Plimsoll Journal. Plain HTML and CSS, hosted free on Cloudflare.
 
 - How it works and how to change it, in plain English: `docs/LEARN.md`
 - Brand rules and the human-made checklist: the BeanByte Studio Brand Guide
