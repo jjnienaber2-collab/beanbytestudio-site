@@ -58,6 +58,9 @@ h1 { font-size: clamp(36px, 6vw, 56px); line-height: 1.1; letter-spacing: -1px; 
 .app.flip { grid-template-columns: 340px 1fr; }
 .app.flip .app-text { order: 2; }
 .app h2 { font-size: 34px; margin: 0 0 6px; }
+/* Plimsoll Journal's P is the Plimsoll mark (ring with a bar through it), drawn to match the app's wordmark */
+.pj { display: inline-block; height: .72em; width: auto; vertical-align: baseline; overflow: visible; margin-right: .02em; }
+.pj * { fill: none; stroke: currentColor; stroke-width: 8; stroke-linecap: round; }
 .app .what { font-size: 21px; color: var(--milk); margin: 0 0 18px; }
 .app ul { margin: 0 0 22px; padding-left: 20px; color: #cfc6b8; }
 .app li { margin-bottom: 6px; }
