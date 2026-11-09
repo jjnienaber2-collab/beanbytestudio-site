@@ -7,7 +7,8 @@ Short explanations of what each piece does and why, plus small hands-on tasks. R
 A website is a folder of files that a server sends to your browser. This site has three kinds:
 
 - **HTML** (`index.html`, `about.html`) holds the content: headings, paragraphs, links and images. Tags like `<h1>` (main heading), `<p>` (paragraph) and `<a href="...">` (link) tell the browser what each piece is.
-- **CSS** (`styles.css`) holds the look: colours, fonts, spacing and layout. Every page links to the same stylesheet, so changing one colour there changes it everywhere.
+- **CSS** holds the look: colours, fonts, spacing and layout. The home page has its own `home.css`, because its "Glow" design (light streaks, device frames, app tour) is much bigger than the other pages. The About and 404 pages share `styles.css`. Both files start with the same named brand colours.
+- **JavaScript** (`home.js`) runs the small moving parts on the home page: the scrolling feature strip, the monthly/yearly price switch, the app tour tabs and the light streaks. The page still reads fine if it doesn't load.
 - **Images** (`img/`) are the logo and real screenshots of the apps.
 
 **Why plain HTML and CSS:** the site only shows information, so it doesn't need a framework like React (which Headroom uses). Fewer moving parts means nothing to install, nothing to break, and pages that load fast on a phone.
