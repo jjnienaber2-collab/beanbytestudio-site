@@ -66,6 +66,13 @@ h1, h2, h3 { text-wrap: balance; }
 /* Plimsoll wordmark: the P is the Plimsoll line */
 .pj { display: inline-block; height: .72em; width: auto; vertical-align: baseline; overflow: visible; margin-right: .02em; }
 .pj * { fill: none; stroke: currentColor; stroke-width: 8; stroke-linecap: round; }
+/* Plimsoll Journal wordmark in the hero: the load-line P, then the name. */
+.pj-lockup { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 26px; }
+.pj-logo { margin: 0; display: inline-flex; align-items: baseline; font-size: clamp(30px, 3.6vw, 40px); line-height: 1; letter-spacing: -.6px; color: var(--milk); }
+.pj-logo .pj { color: var(--crema); height: .74em; margin-right: .03em; }
+.pj-logo .pj * { stroke-width: 7.5; }
+.pj-word { font-weight: 700; }
+.pj-sub { font-weight: 500; color: var(--crema); margin-left: .26em; }
 
 /* Hero stage: real screens in device frames */
 .hero { padding-block: 80px 0; text-align: center; }

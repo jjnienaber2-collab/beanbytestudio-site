@@ -38,6 +38,14 @@ function pageProblems(name, html) {
     const exists = [file, file + '.html', path.join(file, 'index.html')].some((f) => fs.existsSync(path.join(PUB, f)));
     if (!exists) p.push(`broken link ${url}`);
   }
+  // Link previews (WhatsApp, X, Facebook, LinkedIn) need an absolute og:image that exists in public/.
+  if (name !== '404.html') {
+    const img = (html.match(/<meta property="og:image" content="([^"]+)"/) || [])[1];
+    if (!img) p.push('no og:image (no link preview)');
+    else if (!img.startsWith(LIVE + '/')) p.push(`og:image must be a full ${LIVE} URL`);
+    else if (!fs.existsSync(path.join(PUB, img.slice(LIVE.length)))) p.push(`og:image file missing: ${img.slice(LIVE.length)}`);
+    if (!html.includes('<meta name="twitter:card" content="summary_large_image">')) p.push('no twitter:card');
+  }
   if (name !== '404.html') for (const s of SOCIALS) if (!html.includes(`href="${s}"`)) p.push(`missing social link ${s}`);
   return p;
 }
