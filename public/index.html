@@ -3,107 +3,191 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BeanByte Studio: clear-headed apps for small traders</title>
-  <meta name="description" content="A one-person app studio in Gauteng, South Africa. Headroom and Plimsoll Journal help small FX and CFD traders see their real numbers before they trade.">
-  <meta property="og:title" content="BeanByte Studio">
-  <meta property="og:description" content="Clear-headed apps for small traders, made in South Africa.">
+  <title>Plimsoll Journal by BeanByte Studio: the trading journal that knows when to stop</title>
+  <meta name="description" content="Plimsoll Journal is a trading journal for FX and CFD traders. Log every trade, set daily stop rules, and see your win rate, profit factor and drawdown in rand. Free to start, made in South Africa by BeanByte Studio.">
+  <meta property="og:title" content="Plimsoll Journal by BeanByte Studio">
+  <meta property="og:description" content="The trading journal that knows when to stop. Free to start, priced in rand.">
   <meta property="og:image" content="/img/og.png">
+  <meta name="theme-color" content="#0f0d0b">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/home.css">
+  <script src="/home.js" defer></script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-stop" viewBox="0 0 24 24"><path d="M8 3h8l5 5v8l-5 5H8l-5-5V8z"/><path d="M9 12h6"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 19h16"/><path d="M6 15l4-4 3 3 5-6"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4h10a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h10"/></symbol>
+</svg>
+
+<!-- ================= HERO: Plimsoll Journal ================= -->
+<section class="band glow">
+  <canvas class="streaks" data-streaks aria-hidden="true"></canvas>
   <div class="wrap">
     <header class="top">
-      <a class="brand" href="/"><img src="/img/mark.svg" alt="" width="34" height="34">BeanByte <span>Studio</span></a>
-      <nav class="nav" aria-label="Main">
-        <a href="#apps">Apps</a>
-        <a href="/about">About</a>
-      </nav>
+      <a class="brand" href="/"><img src="/img/mark.svg" alt="" width="32" height="32">BeanByte <span>Studio</span></a>
+      <nav class="nav" aria-label="Main"><a href="#tour" class="hide-sm">Plimsoll Journal</a><a href="#pricing" class="hide-sm">Pricing</a><a href="#headroom" class="hide-sm">Headroom</a><a href="/about" class="hide-sm">About</a><a class="btn btn-main" href="https://plimsoll-journal.pages.dev/?app">Open the app</a></nav>
     </header>
-
-    <main>
-      <section class="intro">
-        <h1>Clear-headed apps for small traders.</h1>
-        <p class="lead">BeanByte Studio is a one-person app studio in Gauteng, South Africa. I build simple tools that show your real numbers before you trade. They're priced in rand, and your trades stay on your own device.</p>
-        <div class="actions">
-          <a class="btn btn-main" href="#apps">See the apps</a>
-          <a class="btn btn-plain" href="https://x.com/beanbytestudio">Follow on X</a>
-        </div>
-      </section>
-
-      <section class="app" id="apps">
-        <div class="app-text">
-          <h2>Headroom</h2>
-          <p class="what">Know how much you can lose before your broker closes your trades.</p>
-          <ul>
-            <li>See your margin level and the money left before stop-out, before you place a trade.</li>
-            <li>Set your own limits for leverage, risk and daily loss, and see which trades break them.</li>
-            <li>Works offline. Your trades stay on your phone and back up to a file you keep.</li>
-          </ul>
-          <p class="price">R449 once (founding price) · 30 days free, no card</p>
-          <a class="btn btn-main" href="https://headroom.beanbytes.workers.dev">Open Headroom</a>
-        </div>
-        <figure class="shot">
-          <img src="/img/headroom-overview.webp" width="585" height="900" alt="Headroom on a phone showing R9,522 left before stop-out, the margin runway, equity and open positions">
-          <figcaption>Sample account in rand.</figcaption>
-        </figure>
-      </section>
-
-      <section class="app flip">
-        <div class="app-text">
-          <h2 aria-label="Plimsoll Journal"><svg class="pj" viewBox="5 6 56 54" aria-hidden="true"><path d="M17 9V58M7 24H59"/><circle cx="33" cy="24" r="15"/></svg>limsoll Journal</h2>
-          <p class="what">The full trading journal: every trade, your notes, and what is actually working.</p>
-          <ul>
-            <li>Win rate, profit factor and drawdown, worked out from your own trades.</li>
-            <li>Daily stop rules: a loss limit and a maximum number of losses in a row.</li>
-            <li>Import your broker's history from a CSV file, and keep a trading diary next to it.</li>
-          </ul>
-          <p class="price">Free plan · Pro from R59 a month or R449 a year · 30-day Pro trial</p>
-          <a class="btn btn-main" href="https://plimsoll-journal.pages.dev">Open Plimsoll Journal</a>
-        </div>
-        <figure class="shot">
-          <img src="/img/plimsoll-journal-dashboard.webp" width="585" height="1266" alt="Plimsoll Journal dashboard with a demo journal: within stop rules, net profit R364.98 over 74 trades, win rate 47.3 percent">
-          <figcaption>Demo journal with sample trades.</figcaption>
-        </figure>
-      </section>
-
-      <section class="notes">
-        <h2>How BeanByte apps work</h2>
-        <div>
-          <h3>Your data stays with you</h3>
-          <p>Both apps keep your trades in your own browser. Nothing is sent to us unless you turn on sync.</p>
-        </div>
-        <div>
-          <h3>Prices you can plan around</h3>
-          <p>Rand prices, a free trial without a card, and a one-time option for people who don't want another subscription.</p>
-        </div>
-        <div>
-          <h3>Your numbers, not advice</h3>
-          <p>The apps show your own figures and check your own rules. They never tell you what to trade.</p>
-        </div>
-      </section>
-
-      <section class="follow">
-        <h2>Follow along</h2>
-        <p>I share what I ship each week, and what traders ask me to build next.</p>
-        <div class="actions">
-          <a class="btn btn-plain" href="https://x.com/beanbytestudio">X: @beanbytestudio</a>
-          <a class="btn btn-plain" href="https://www.instagram.com/beanbytestudio/">Instagram: @beanbytestudio</a>
-          <a class="btn btn-plain" href="https://bsky.app/profile/beanbytestudio.bsky.social">Bluesky: @beanbytestudio</a>
-          <a class="btn btn-plain" href="https://www.tiktok.com/@beanbyte.studio">TikTok: @beanbyte.studio</a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="foot">
-      <span>© 2026 BeanByte Studio · Gauteng, South Africa</span>
-      <a href="/about">About</a>
-      <a href="mailto:jjnienaber2@gmail.com">Email</a>
-      <span>This site uses no cookies.</span>
-    </footer>
+    <div class="hero">
+      <p class="eyebrow" style="justify-content:center"><span aria-label="Plimsoll Journal"><svg class="pj" viewBox="5 6 56 54" aria-hidden="true"><path d="M17 9V58M7 24H59"/><circle cx="33" cy="24" r="15"/></svg>limsoll Journal</span><span class="tag">Founder prices open</span></p>
+      <h1 class="h1">The trading journal that knows <em>when to stop.</em></h1>
+      <p class="lead" style="margin-inline:auto">Log every trade, set your daily stop rules, and see your win rate, profit factor and drawdown in rand. Plimsoll tells you when you've hit your limit for the day, so you know when to walk away.</p>
+      <div class="actions" style="justify-content:center"><a class="btn btn-main" href="https://plimsoll-journal.pages.dev/?app">Start free, no sign-up</a><a class="btn btn-plain" href="#tour">Take the tour</a></div>
+      <p class="fine">Free forever for unlimited trades. Pro is free for 30 days, no card.</p>
+      <div class="stage">
+        <div class="laptop"><img src="/img/pj-desktop.webp" width="1600" height="1000" alt="Plimsoll Journal on desktop: demo journal dashboard showing net P/L +R364.98 over 74 trades, 47.3% win rate, profit factor 1.09, max drawdown −R1,708.89 and the equity curve"></div>
+        <div class="phone"><img src="/img/pj-phone.webp" width="600" height="1022" alt="Plimsoll Journal on a phone: demo journal header with the stop-rules check, within your stop rules"></div>
+      </div>
+      <p class="caption">Real screens from the Plimsoll demo journal, in the Dark Roast theme. Sample trades, not real results.</p>
+    </div>
   </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track" data-ticker="Daily stop rules|Losses in a row limit|Win rate, profit factor, drawdown|Equity curve|Results by day, week and month|CSV import from your broker|Trading diary|Real and practice accounts|Works offline|Installs like an app|Prices in rand"></div></div>
+
+<section class="band pad-s">
+  <div class="wrap bigstats">
+    <div class="glass"><b>R0</b><span>Free plan, unlimited trades, forever</span></div>
+    <div class="glass"><b>30 days</b><span>Pro free with Google sign-in, no card</span></div>
+    <div class="glass"><b>R449</b><span>Pro a year at the founder price</span></div>
+    <div class="glass"><b>18</b><span>Themes, including this Dark Roast one</span></div>
+  </div>
+</section>
+
+<!-- ================= Questions ================= -->
+<section class="band pad">
+  <canvas class="streaks" data-streaks aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="eyebrow">Questions every trader should be able to answer</p>
+    <h2 class="h2">Do you <em>really</em> know what your trading is doing?</h2>
+    <p class="lead">Most traders have a plan. Very few can see, on the day, whether they kept it, or which part of it actually makes money.</p>
+    <div class="qcards">
+      <div class="qcard glass"><span class="ico"><svg class="i"><use href="#i-stop"/></svg></span><h3>When should you stop?</h3><p>Did today stay inside your loss limit? Was that a third loss in a row?</p><p>How many trades have you already taken?</p><p class="ans">Stop rules check every trade.</p></div>
+      <div class="qcard glass"><span class="ico"><svg class="i"><use href="#i-chart"/></svg></span><h3>What actually pays?</h3><p>Which pair makes money and which one quietly bleeds it?</p><p>Is a win rate under 50% still a winning month?</p><p class="ans">The dashboard adds it up.</p></div>
+      <div class="qcard glass"><span class="ico"><svg class="i"><use href="#i-book"/></svg></span><h3>What went wrong?</h3><p>What did your worst days have in common?</p><p>Do your trades pay better when you follow your own rules?</p><p class="ans">The diary sits beside the numbers.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Tour ================= -->
+<section class="band roast pad" id="tour">
+  <div class="wrap center">
+    <p class="eyebrow">Inside Plimsoll Journal</p>
+    <h2 class="h2">One journal. <em>Every angle on your trades.</em></h2>
+    <div class="tabs" role="tablist" aria-label="App screens">
+      <button type="button" role="tab" id="t-dash" aria-selected="true" aria-controls="p-dash">Dashboard</button>
+      <button type="button" role="tab" id="t-res" aria-selected="false" aria-controls="p-res" tabindex="-1">Results</button>
+      <button type="button" role="tab" id="t-trd" aria-selected="false" aria-controls="p-trd" tabindex="-1">Trades</button>
+      <button type="button" role="tab" id="t-jrn" aria-selected="false" aria-controls="p-jrn" tabindex="-1">Journal</button>
+      <button type="button" role="tab" id="t-dia" aria-selected="false" aria-controls="p-dia" tabindex="-1">Diary</button>
+    </div>
+    <div class="tour" role="tabpanel" id="p-dash" aria-labelledby="t-dash">
+      <div><h3>Your numbers, <em>at a glance.</em></h3><ul class="arrows"><li><b>Net P/L, win rate, profit factor</b> and max drawdown in rand.</li><li><b>Equity curve</b> with its high and low marked.</li><li><b>What the numbers say:</b> which pair made money and which one lost it.</li></ul><div class="note"><b>Stop rules on every screen</b>Today's loss against your limit, trades taken and losses in a row.</div></div>
+      <div class="screen"><img src="/img/pj-desktop.webp" width="1600" height="1000" alt="Plimsoll dashboard with stats and equity curve" loading="lazy"></div>
+    </div>
+    <div class="tour" role="tabpanel" id="p-res" aria-labelledby="t-res" hidden>
+      <div><h3>Every day, week and <em>month.</em></h3><ul class="arrows"><li><b>Today, this week and this month</b>, compared with the last.</li><li><b>Net P/L per day</b> with your green days, best day and worst day.</li><li>Switch between <b>daily, weekly and monthly</b> bars.</li></ul></div>
+      <div class="screen"><img src="/img/pj-desktop-results.webp" width="1600" height="1000" alt="Plimsoll results tab with daily profit and loss bars" loading="lazy"></div>
+    </div>
+    <div class="tour" role="tabpanel" id="p-trd" aria-labelledby="t-trd" hidden>
+      <div><h3>Every trade in <em>one table.</em></h3><ul class="arrows"><li><b>Import your broker's CSV</b> or add trades by hand.</li><li>Search by asset, setup or notes, and filter by result.</li><li>Mark each trade as <b>followed or broke your rules</b>.</li><li>Export to CSV and back up to a file you keep.</li></ul></div>
+      <div class="screen"><img src="/img/pj-desktop-trades.webp" width="1600" height="1000" alt="Plimsoll trades table with import and export buttons" loading="lazy"></div>
+    </div>
+    <div class="tour" role="tabpanel" id="p-jrn" aria-labelledby="t-jrn" hidden>
+      <div><h3>The story behind <em>each trade.</em></h3><ul class="arrows"><li><b>Setup</b> for every trade: pullback, breakout, news and your own.</li><li><b>Confidence</b> from one to five, so you can see if it matters.</li><li>Win or loss and the rand result, side by side.</li></ul></div>
+      <div class="screen"><img src="/img/pj-desktop-journal.webp" width="1600" height="1000" alt="Plimsoll journal tab listing trades with setup and confidence" loading="lazy"></div>
+    </div>
+    <div class="tour" role="tabpanel" id="p-dia" aria-labelledby="t-dia" hidden>
+      <div><h3>One entry a day. <em>One lesson.</em></h3><ul class="arrows"><li>Write about your trading day in a sentence or two.</li><li>Each entry shows that day's <b>trades, wins, losses and result</b>.</li><li>Add the <b>lesson</b>, so the pattern is easy to spot on Sunday.</li></ul></div>
+      <div class="screen"><img src="/img/pj-desktop-diary.webp" width="1600" height="1000" alt="Plimsoll diary tab with daily entries and lessons" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Diary lines ================= -->
+<section class="band pad">
+  <canvas class="streaks" data-streaks aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="eyebrow">From the demo diary</p>
+    <h2 class="h2">The lesson is usually <em>one line long.</em></h2>
+    <div class="diary">
+      <div class="dentry glass"><div class="d"><span><b>Tue, Nov 3</b> · 3 trades · 1W 2L</span><span class="r num">−R42.43</span></div><p class="t">Overtraded after the first loss.</p><p class="l"><b>Lesson:</b> Walk away after two losses.</p></div>
+      <div class="dentry glass"><div class="d"><span><b>Fri, Nov 6</b> · 4 trades · 3W 1L</span><span class="g num">+R238.20</span></div><p class="t">Patient session, waited for my setups.</p><p class="l"><b>Lesson:</b> Stick to the plan.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Steps ================= -->
+<section class="band roast pad">
+  <div class="wrap center">
+    <p class="eyebrow">Getting started</p>
+    <h2 class="h2">Three steps. <em>Then just trade.</em></h2>
+    <ol class="steps">
+      <li><h3>Open the app</h3><p>In any browser. No sign-up for the free plan. Install it on your phone or desktop.</p></li>
+      <li><h3>Set your stop rules</h3><p>Currency, starting balance, daily loss limit and losses in a row.</p></li>
+      <li><h3>Log or import trades</h3><p>Add each trade, or import your broker's CSV, and watch the numbers fill in.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= Pricing ================= -->
+<section class="band glow pad" id="pricing">
+  <canvas class="streaks" data-streaks aria-hidden="true"></canvas>
+  <div class="wrap center">
+    <p class="eyebrow">Pricing</p>
+    <h2 class="h2">Start free. <em>Lock in a founder price.</em></h2>
+    <p class="lead">The first 100 subscribers keep their founder price for as long as they stay subscribed. Prices in rand, nothing added.</p>
+    <div class="toggle"><span>Monthly</span><button class="switch" type="button" role="switch" aria-checked="true" aria-label="Yearly billing" id="bill"></button><span>Yearly</span><span class="save">Save 37%</span></div>
+    <div class="plans">
+      <div class="plan glass"><h3>Free</h3><p class="d">The whole journal on this device. No sign-up, no time limit.</p><div class="p">R0</div><p class="n">Forever</p><a class="btn btn-plain" href="https://plimsoll-journal.pages.dev/?app">Open the app</a><ul><li>Unlimited trades</li><li>Dashboard and stop rules</li><li>Diary and edge check</li><li>CSV import, export and backups</li><li>5 themes</li></ul></div>
+      <div class="plan glass pick"><span class="flag">Founder price</span><h3>Pro</h3><p class="d">Everything in Free, synced across your devices. 30 days free, no card.</p><div class="p" id="pro-p">R449 <small>a year</small></div><p class="n" id="pro-n">Standard <s>R699</s> a year</p><a class="btn btn-main" href="https://plimsoll-journal.pages.dev/?app">Try Pro free</a><ul><li>Cloud sync with Google sign-in</li><li>Calendar heatmap</li><li>Session analytics</li><li>SA tax-year summary and CSV</li><li>All 18 themes</li></ul></div>
+      <div class="plan glass"><h3>Founder Lifetime</h3><p class="d">Pay once for Pro. Limited to 100 sales, closes 31 January 2027.</p><div class="p">R1,499 <small>once</small></div><p class="n">Not sold after the founder offer</p><a class="btn btn-plain" href="https://plimsoll-journal.pages.dev/?app">See in the app</a><ul><li>Everything in Pro</li><li>One payment, no renewals</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Side app: Headroom ================= -->
+<section class="band pad-s" id="headroom">
+  <div class="wrap">
+    <p class="eyebrow">Also from BeanByte</p>
+    <div class="side glass">
+      <div class="shot"><img src="/img/headroom-overview.webp" width="585" height="900" alt="Headroom showing rand left before stop-out"></div>
+      <div><h3>Headroom</h3><p>A small side app for margin traders: see how much you can lose before your broker closes your trades, in rand.</p><p class="meta">R449 once · 30 days free · works offline</p></div>
+      <div class="actions"><a class="btn btn-plain" href="https://headroom.beanbytes.workers.dev">Open Headroom</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Maker ================= -->
+<section class="band roast pad-s">
+  <div class="wrap maker">
+    <div class="avatar">Jaun's<br>photo</div>
+    <div><blockquote>“Not giving up, and sticking to my rules, is the best decision I've made as a trader. Plimsoll is the journal that helps you do the same.”</blockquote><cite>Jaun, BeanByte Studio, Gauteng · designed and tested by me, built with help from AI tools</cite></div>
+  </div>
+</section>
+
+<section class="band glow">
+  <canvas class="streaks" data-streaks aria-hidden="true"></canvas>
+  <div class="wrap cta">
+    <h2 class="h2">Ready to see what your trading <em>is really doing?</em></h2>
+    <p class="lead" style="margin-inline:auto">Open Plimsoll Journal, load the demo or your own trades, and set the rule that tells you when to stop.</p>
+    <div class="actions" style="justify-content:center"><a class="btn btn-main" href="https://plimsoll-journal.pages.dev/?app">Start free</a><a class="btn btn-plain" href="https://x.com/beanbytestudio">Follow the build</a></div>
+  </div>
+</section>
+
+<section class="band roast"><div class="wrap risk"><p><strong>Risk warning:</strong> trading FX, CFDs and other leveraged products carries a high risk of losing money. Plimsoll Journal is journaling software only. It does not trade, hold funds, give signals or financial advice, and isn't affiliated with any broker.</p></div></section>
+
+<footer class="band"><div class="wrap foot">
+  <div class="foot-grid">
+    <div><a class="brand" href="/"><img src="/img/mark.svg" alt="" width="32" height="32">BeanByte <span>Studio</span></a><p class="small">Clear-headed apps for your money. A one-person studio in Gauteng, South Africa.</p></div>
+    <div><h4>Apps</h4><ul><li><a href="https://plimsoll-journal.pages.dev/?app">Plimsoll Journal</a></li><li><a href="#pricing">Plimsoll pricing</a></li><li><a href="https://headroom.beanbytes.workers.dev">Headroom</a></li></ul></div>
+    <div><h4>Studio</h4><ul><li><a href="/about">About Jaun</a></li><li><a href="mailto:jjnienaber2@gmail.com">Email</a></li><li><a href="https://plimsoll-journal.pages.dev/terms.html">Plimsoll terms</a></li><li><a href="https://plimsoll-journal.pages.dev/privacy.html">Plimsoll privacy</a></li></ul></div>
+    <div><h4>Follow</h4><ul><li><a href="https://x.com/beanbytestudio">X</a></li><li><a href="https://www.instagram.com/beanbytestudio/">Instagram</a></li><li><a href="https://bsky.app/profile/beanbytestudio.bsky.social">Bluesky</a></li><li><a href="https://www.tiktok.com/@beanbyte.studio">TikTok</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 BeanByte Studio · Gauteng, South Africa</span><span>This site uses no cookies.</span></div>
+</div></footer>
 </body>
 </html>
