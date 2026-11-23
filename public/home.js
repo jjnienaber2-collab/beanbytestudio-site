@@ -10,8 +10,8 @@
   sw.addEventListener('click', function () {
     var y = sw.getAttribute('aria-checked') !== 'true';
     sw.setAttribute('aria-checked', y);
-    p.innerHTML = y ? 'R449 <small>a year</small>' : 'R59 <small>a month</small>';
-    n.innerHTML = y ? 'Standard <s>R699</s> a year' : 'Standard <s>R79</s> a month';
+    p.innerHTML = y ? '$24.99 <small>a year</small>' : '$3.99 <small>a month</small>';
+    n.innerHTML = y ? 'Standard <s>$38.99</s> a year' : 'Standard <s>$4.99</s> a month';
   });
 
   // Tour tabs
